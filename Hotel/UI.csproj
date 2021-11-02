@@ -1,0 +1,243 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{5C3778AD-9DBE-4B81-9255-2E7E921EA13D}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Hotel</RootNamespace>
+    <AssemblyName>Hotel</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DAL\CadastroApartamentoDaoComando.cs" />
+    <Compile Include="DAL\CadastroHospedeDaoComandos.cs" />
+    <Compile Include="DAL\ConsultaHospedeDaoComando.cs" />
+    <Compile Include="DAL\LoginDaoComandos.cs" />
+    <Compile Include="DAL\Conexao.cs" />
+    <Compile Include="Apresentação\frm_CadastroHospede.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Apresentação\frm_CadastroHospede.Designer.cs">
+      <DependentUpon>frm_CadastroHospede.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Apresentação\frm_CheckIn.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Apresentação\frm_CheckIn.Designer.cs">
+      <DependentUpon>frm_CheckIn.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Apresentação\frm_CheckOut.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Apresentação\frm_CheckOut.Designer.cs">
+      <DependentUpon>frm_CheckOut.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Apresentação\frm_ConsultarApartamento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Apresentação\frm_ConsultarApartamento.Designer.cs">
+      <DependentUpon>frm_ConsultarApartamento.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Apresentação\frm_ConsultarFuncionario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Apresentação\frm_ConsultarFuncionario.Designer.cs">
+      <DependentUpon>frm_ConsultarFuncionario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Apresentação\frm_ConsultarHospede.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Apresentação\frm_ConsultarHospede.Designer.cs">
+      <DependentUpon>frm_ConsultarHospede.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Apresentação\frm_ConsultarReserva.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Apresentação\frm_ConsultarReserva.Designer.cs">
+      <DependentUpon>frm_ConsultarReserva.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Apresentação\frm_MapaHospedagem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Apresentação\frm_MapaHospedagem.Designer.cs">
+      <DependentUpon>frm_MapaHospedagem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Apresentação\frm_NovaReserva.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Apresentação\frm_NovaReserva.Designer.cs">
+      <DependentUpon>frm_NovaReserva.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Apresentação\frm_Principal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Apresentação\frm_Principal.Designer.cs">
+      <DependentUpon>frm_Principal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Apresentação\frm_Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Apresentação\frm_Login.Designer.cs">
+      <DependentUpon>frm_Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Apresentação\frm_CadastroFuncionario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Apresentação\frm_CadastroFuncionario.Designer.cs">
+      <DependentUpon>frm_CadastroFuncionario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Apresentação\frm_MenuPrincipal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Apresentação\frm_MenuPrincipal.Designer.cs">
+      <DependentUpon>frm_MenuPrincipal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Apresentação\frm_CadastroAp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Apresentação\frm_CadastroAp.Designer.cs">
+      <DependentUpon>frm_CadastroAp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HostelDataSetFuncionario.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>HostelDataSetFuncionario.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="HostelDataSetHospede.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>HostelDataSetHospede.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="login.Designer.cs">
+      <DependentUpon>login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\Banco.cs" />
+    <Compile Include="Modelo\Controle.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Apresentação\frm_CadastroAp.resx">
+      <DependentUpon>frm_CadastroAp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Apresentação\frm_CadastroHospede.resx">
+      <DependentUpon>frm_CadastroHospede.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Apresentação\frm_CadastroFuncionario.resx">
+      <DependentUpon>frm_CadastroFuncionario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Apresentação\frm_CheckIn.resx">
+      <DependentUpon>frm_CheckIn.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Apresentação\frm_CheckOut.resx">
+      <DependentUpon>frm_CheckOut.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Apresentação\frm_ConsultarApartamento.resx">
+      <DependentUpon>frm_ConsultarApartamento.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Apresentação\frm_ConsultarFuncionario.resx">
+      <DependentUpon>frm_ConsultarFuncionario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Apresentação\frm_ConsultarHospede.resx">
+      <DependentUpon>frm_ConsultarHospede.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Apresentação\frm_MenuPrincipal.resx">
+      <DependentUpon>frm_MenuPrincipal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Apresentação\frm_NovaReserva.resx">
+      <DependentUpon>frm_NovaReserva.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Apresentação\frm_Principal.resx">
+      <DependentUpon>frm_Principal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Apresentação\frm_Login.resx">
+      <DependentUpon>frm_Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="login.resx">
+      <DependentUpon>login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <None Include="HostelDataSetFuncionario.xsc">
+      <DependentUpon>HostelDataSetFuncionario.xsd</DependentUpon>
+    </None>
+    <None Include="HostelDataSetFuncionario.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>HostelDataSetFuncionario.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="HostelDataSetFuncionario.xss">
+      <DependentUpon>HostelDataSetFuncionario.xsd</DependentUpon>
+    </None>
+    <None Include="HostelDataSetHospede.xsc">
+      <DependentUpon>HostelDataSetHospede.xsd</DependentUpon>
+    </None>
+    <None Include="HostelDataSetHospede.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>HostelDataSetHospede.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="HostelDataSetHospede.xss">
+      <DependentUpon>HostelDataSetHospede.xsd</DependentUpon>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
